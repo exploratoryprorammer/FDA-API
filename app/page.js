@@ -46,7 +46,9 @@ export default function Home() {
             "LegalName",
             "City",
             "State",
-            "AddressLine1"
+            "AddressLine1",
+            "AddressLine2"
+
           ]
         }),
   
