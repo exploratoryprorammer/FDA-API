@@ -30,8 +30,8 @@ export default function Home() {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Authorization-User': 'rksah@iastate.edu',
-          'Authorization-Key': '5BW223qM7A8cxVMM',
+          'Authorization-User': process.env.NEXT_PUBLIC_AuthorizationUser,
+          'Authorization-Key': process.env.NEXT_PUBLIC_AuthorizationKey,
         },
         body: JSON.stringify({
 
