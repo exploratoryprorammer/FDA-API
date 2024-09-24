@@ -26,7 +26,7 @@ export default function Home() {
   const onClick = async () => {
     const feinNumbers = text.split(',').map(num => num.trim()).filter(Boolean);
     try {
-      const apiResponse = await fetch('https://api-datadashboard.fda.gov/v1/inspections_citations', {
+      const apiResponse = await fetch('https://api-datadashboard.fda.gov/v1/inspections_classifications', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -34,7 +34,6 @@ export default function Home() {
           'Authorization-Key': process.env.NEXT_PUBLIC_AuthorizationKey,
         },
         body: JSON.stringify({
-
           "sort": "LegalName",
           "sortorder": "ASC",
           "returntotalcount": true,
